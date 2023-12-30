@@ -1,0 +1,62 @@
+<div style="display:flex; flex-wrap: wrap; margin-top: 3px; ">
+    <div class="card" style="width: 18rem; width: 300px;
+  border: 3px solid green;
+  padding: 30px;
+  margin: 20px" *ngFor="let product of products">
+  <img src="https://i.imgur.com/6IUbEME.jpg" class="card-img-top" alt="" >
+  <div class="card-body">
+    <h5 class="card-title">Product 4</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <h6>ProductId: {{product.productId}}</h6>
+        <h6>ProductType: {{product.productType}}</h6>
+        <h6>productModel: {{product.productModel}}</h6>
+        <h6>ProductType: {{product.productDescription}}</h6>
+        <h6>ProductValue: {{product.productValue}}</h6>
+        <h6>Price: {{product.price}}</h6>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+   <div class="col-lg-2">
+                                        <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus"  data-field="">
+                                          <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                    </span>
+                                    <span type="text" id="quantity" name="quantity" class="form-control input-number" ></span>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                        </div>
+  <div class="container">
+  <div class="row mb-8 justify-content-center ">
+<div class="col-md-6 col-12">
+   
+ <div class="col-12"> 
+   
+      <!-- <div class="input-group w-auto justify-content-end align-items-center">
+         <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+         <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
+         <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
+      </div> -->
+   </div>
+</div>
+
+
+
+    </div>
+  </div>
+  <div class="card-body">
+    <!-- <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> -->
+     <button type="button" class="btn btn-primary">Add Item</button>
+    <button type="button" class="btn btn-danger">Delete Item</button>
+  </div>
+</div>

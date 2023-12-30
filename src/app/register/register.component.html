@@ -1,0 +1,79 @@
+
+
+<body> 
+	<div class="main"> 
+		<h1>Registration Form</h1> 
+		<form action="" > 
+			<label for="first">First Name:</label> 
+			<input type="text" id="first"
+				name="first"
+				placeholder="Enter your first name" [(ngModel)]="signupObj.userName" required> 
+
+			<label for="last">Last Name:</label> 
+			<input type="text" id="last"
+				name="last"
+				placeholder="Enter your last name" required [(ngModel)]="signupObj.lastName" required> 
+
+			<label for="email">Email:</label> 
+			<input type="email" id="email"
+				name="email"
+				placeholder="Enter your email" [(ngModel)]="signupObj.email"  required> 
+
+			<label for="dob">Date of Birth:</label> 
+			<input type="date"
+				id="dob" name="dob"
+				placeholder="Enter your DOB" required> 
+
+			<label for="password">Password:</label> 
+			<input type="password" id="password"
+				name="password"
+				placeholder="Enter your password"
+				pattern= 
+				"^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required				 
+				title="Password must contain at least one number, 
+					one alphabet, one symbol, and be at 
+					least 8 characters long" [(ngModel)]="signupObj.password"> 
+
+			<label for="repassword">Re-type Password:</label> 
+			<input type="password" id="repassword"
+				name="repassword"
+				placeholder="Re-Enter your password"  [(ngModel)]="signupObj.retypepassword" required> 
+			<span id="pass"></span> 
+
+			<label for="mobile">Contact:</label> 
+			<input type="text" id="mobile"
+				name="mobile"
+				placeholder="Enter your Mobile Number" [(ngModel)]="signupObj.contact" required 
+				maxlength="10"> 
+
+			<label for="gender">Gender:</label> 
+			<select id="gender" name="gender" required> 
+				<option value="male">Male</option> 
+				<option value="female">Female</option> 
+				<option value="other">Other</option> 
+			</select> 
+
+			<div class="wrap"> 
+				<!-- <button (click)="onSignUp()"   type="submit" > 
+				Submit 
+				</button>  -->
+				<button (click)="onSignUp()" type="submit" > Submit</button>
+
+			</div> 
+		</form> 
+	</div> 
+	<br>
+	<!-- <div class="main"  *ngIf="!value">
+      <form>
+        <label for="chk" aria-hidden="true">Login</label>
+		<input type="email" name="email" placeholder="User Name" [(ngModel)]="loginObj.userName">
+		<input type="password" name="password" placeholder="Password" [(ngModel)]="loginObj.password">
+		< <button (click)="onLogin()" (click)="onProductsClick()">Login</button> -->
+		<!-- <button  (click)="onProductsClick()">Select Product</button> -->
+		<!-- <button (click)="onLogin()">Login</button>
+
+      </form>
+
+    </div> -->
+</body> 
+

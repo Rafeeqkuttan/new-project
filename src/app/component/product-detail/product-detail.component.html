@@ -1,0 +1,32 @@
+<!-- <nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a class ="navbar-brand"style="color:white;">E-commerce Website</a>
+        <button routerLink="/"class="btn btn-warning text-light">BACK</button>
+    </div>
+</nav> -->
+
+<div class="container" class="fit" >
+    <div class="row product-detail">
+        <img class="product-img" src="{{productdata?.image}}">
+      <div class="col-sm-8" style="text-align:right;">
+         <button class="btn btn-primary">Buy Now</button>&nbsp;
+         <button (click)="addtocart(productdata)" *ngIf="showadd" class="btn btn-success">Add to Cart</button>
+         <button (click)="removeitem(productdata)" *ngIf="showremove" class="btn btn-info">Remove Item</button>
+         <br>
+       
+          <h3>{{productdata?.title}}</h3>
+            <p style ="color:green">Special price</p>
+            <h3>Price:${{productdata?.price}}</h3>
+            <strong>Category:&nbsp;{{productdata?.category}}</strong><br>
+            <strong>Description:&nbsp;{{productdata?.description}}</strong><br>
+            <!-- <p style ="color:green">Discount:{{productdata?.discountPercentage}}</p><br>
+            <strong>Stocks:{{productdata?.stock}}</strong><br> -->
+            <button (click)="onClick()" class="btn btn-warning text-light mt-2">Back</button>
+        
+
+      </div>    
+    </div>
+
+    <!-- rightside -->
+    
+</div> 
